@@ -11,6 +11,8 @@ public class Qes1_3 {
 
 
         // 1
+        // 【概要】入力処理  
+        // 【詳細】ユーザー名を入力する。
         System.out.print("ユーザー名を入力してください: ");
 		System.out.println();
 		
@@ -26,7 +28,10 @@ public class Qes1_3 {
         }
 
 
+        
         // 2
+        // 【概要】半角英数字制御処理  
+        // 【詳細】ユーザー名を半角英数字のみに限定する。
         System.out.print("ユーザー名を入力してください: ");
 		System.out.println();
         String username2 = scanner.nextLine();
@@ -42,7 +47,11 @@ public class Qes1_3 {
             System.out.println("ユーザー名「" + username2 + "」を登録しました");
         }
         
+        
+        
         // 3
+        // 【概要】条件分岐処理  
+        // 【詳細】ユーザー名が正しく処理された場合、じゃんけんをする。
         System.out.print("ユーザー名を入力してください: ");
 		System.out.println();
         String username3 = scanner.nextLine();
@@ -59,7 +68,7 @@ public class Qes1_3 {
         } else {
             System.out.println("ユーザー名「" + username3 + "」を登録しました");
         }
-        // 正常な名前 → ジャンケン開始
+        // ジャンケン開始
         System.out.println("ユーザー名「" + username + "」を登録しました");
 
         Random rand = new Random();
@@ -69,10 +78,9 @@ public class Qes1_3 {
             System.out.println("\n0:グー 1:チョキ 2:パー から手を選んで番号で入力してください:");
             int playerHand;
 
-            // 入力が数値かどうかを確認
             if (!scanner.hasNextInt()) {
                 System.out.println("0〜2の数字を入力してください");
-                scanner.next(); // 不正入力を読み飛ばす
+                scanner.next(); 
                 continue;
             }
 
@@ -86,12 +94,11 @@ public class Qes1_3 {
             int cpuHand = rand.nextInt(3);
             round++;
 
-            // 表示
             String[] hands = {"グー", "チョキ", "パー"};
             System.out.println("\n" + username + "の手は「" + hands[playerHand] + "」");
             System.out.println("相手の手は「" + hands[cpuHand] + "」");
 
-            // 勝敗判定
+            // 判定
             if (playerHand == cpuHand) {
                 System.out.println("DRAW あいこ もう一回しましょう！");
                 continue;

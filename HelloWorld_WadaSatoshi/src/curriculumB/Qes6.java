@@ -6,6 +6,9 @@ public class Qes6 {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ 
+        // 6
+        // 【概要】台数管理処理  
+        // 【詳細】入力した機材の0～10台数をランダムに決定する。
         Random rand = new Random();
         Scanner scanner = new Scanner(System.in);
         

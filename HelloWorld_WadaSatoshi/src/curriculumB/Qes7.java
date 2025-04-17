@@ -4,6 +4,9 @@ public class Qes7 {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
+        // 7
+        // 【概要】成績集計処理  
+        // 【詳細】生徒それぞれの点数をランダムで決定し、平均を出力する。
 		   Scanner scanner = new Scanner(System.in);
 
 		   int studentCount;
