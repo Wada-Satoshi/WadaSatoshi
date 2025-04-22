@@ -9,87 +9,27 @@ public class Qes1_3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-
-        // 1
-        // 【概要】入力処理  
-        // 【詳細】ユーザー名を入力する。
+        // ユーザー名入力処理（1回だけ実行）
         String username;
-
         while (true) {
-            System.out.print("第一問：ユーザー名を入力してください: ");
+            System.out.print("ユーザー名を入力してください: ");
             System.out.println();
-            
             username = scanner.nextLine();
 
             if (username == null || username.trim().isEmpty()) {
                 System.out.println("名前を入力してください");
             } else if (username.length() > 10) {
                 System.out.println("名前を10文字以内にしてください");
+            } else if (!username.matches("^[a-zA-Z0-9]+$")) {
+                System.out.println("半角英数字のみで名前を入力してください");
             } else {
                 System.out.println("ユーザー名「" + username + "」を登録しました");
-                break; 
+                break;
             }
         }
 
-
-
-
-        
-        // 2
-        // 【概要】半角英数字制御処理  
-        // 【詳細】ユーザー名を半角英数字のみに限定する。
-        String username2;
-
-        while (true) {
-            System.out.print("第二問：ユーザー名を入力してください: ");
-    		System.out.println();
-            
-            username2 = scanner.nextLine();
-
-            if (username2 == null || username2.trim().isEmpty()) {
-                System.out.println("名前を入力してください");
-            } else if (username2.length() > 10) {
-                System.out.println("名前を10文字以内にしてください");
-            } else if (!username2.matches("^[a-zA-Z0-9]+$")) {
-                System.out.println("半角英数字のみで名前を入力してください");
-            } else {
-                System.out.println("ユーザー名「" + username2 + "」を登録しました");
-                break; 
-            }
-        }
-
-        
-        
-        // 3
-        // 【概要】条件分岐処理  
-        // 【詳細】ユーザー名が正しく処理された場合、じゃんけんをする。
-        System.out.print("第三問：ユーザー名を入力してください: ");
-		System.out.println();
-        String username3 = scanner.nextLine();
-        
-        
-        while (true) {
-            System.out.print("第三問：ユーザー名を入力してください: ");
-    		System.out.println();
-            
-            username3 = scanner.nextLine();
-
-            if (username3 == null || username3.trim().isEmpty()) {
-                System.out.println("名前を入力してください");
-            } else if (username3.length() > 10) {
-                System.out.println("名前を10文字以内にしてください");
-            } else if (!username3.matches("^[a-zA-Z0-9]+$")) {
-                System.out.println("半角英数字のみで名前を入力してください");
-            } else {
-                System.out.println("ユーザー名「" + username3 + "」を登録しました");
-                break; 
-            }
-        }
-        
         
         // ジャンケン開始
-        System.out.println("ユーザー名「" + username3 + "」を登録しました");
-
         Random rand = new Random();
         int round = 0;
 
@@ -114,7 +54,7 @@ public class Qes1_3 {
             round++;
 
             String[] hands = {"グー", "チョキ", "パー"};
-            System.out.println("\n" + username3 + "の手は「" + hands[playerHand] + "」");
+            System.out.println("\n" + username + "の手は「" + hands[playerHand] + "」");
             System.out.println("相手の手は「" + hands[cpuHand] + "」");
 
             // 判定
