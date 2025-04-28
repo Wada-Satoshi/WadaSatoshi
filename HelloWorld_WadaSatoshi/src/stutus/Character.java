@@ -1,5 +1,6 @@
 package stutus;
 
+
 public class Character {
     private String name;
     private int hp;
