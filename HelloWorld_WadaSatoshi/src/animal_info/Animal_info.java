@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Animal_info {
     
-    // 学名マップ作成
+
     public static String getScientificName(String name) {
         switch (name) {
             case "ライオン": return "パンテラ レオ";
@@ -20,7 +20,7 @@ public class Animal_info {
         Scanner scanner = new Scanner(System.in);
         System.out.println("コンソールに文字を入力してください");
 
-        // 入力例：ライオン:2.1:80,ゾウ:3.2:40,...
+
         String input = scanner.nextLine();
         String[] animals = input.split(",");
 
