@@ -11,7 +11,7 @@ public class PrefdataMain {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // 入力処理
+
         System.out.println("インデックスをカンマ区切りで入力してください（例：8,5,9）：");
         String[] indexInput = scanner.nextLine().split(",");
 
