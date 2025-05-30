@@ -4,7 +4,6 @@ public class Vehicle {
 
 	  private String owner;
 
-	  // ✅ 問題3: ゲッター・セッター
 	  public String getOwner() {
 	    return owner;
 	  }

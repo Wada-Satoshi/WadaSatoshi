@@ -9,7 +9,6 @@ public class Main {
 	    Car car = new Car();
 	    Bicycle bicycle = new Bicycle();
 
-	    // 乗り物を購入（buyメソッド使用）
 	    person1.buy(car);
 	    person2.buy(bicycle);
 	  }

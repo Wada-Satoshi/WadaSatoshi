@@ -34,7 +34,6 @@ public class Person {
 	    System.out.println("合計" + count + "人です");
 	  }
 
-	  // ✅ 問題6-9: buyメソッド定義（オーバーロード）
 	  public void buy(Car car) {
 	    car.setOwner(this.fullName());
 	    System.out.println(car.getOwner() + "が購入しました");
